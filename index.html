@@ -194,6 +194,49 @@
             width: 100%;
             color: white; /* Christmas Blue */
         }
+        
+        #Support {
+            border-bottom: 1px solid #; /* Thicker Christmas Green band */
+                background-color: rgba(0, 0, 0, 0.8); /* White with some transparency */
+            padding-bottom: 5px;
+            padding-top: 1px;
+            margin-bottom: 5px;
+            margin-top: 18px;
+
+        }
+        
+        
+            <title>Contact Us Form</title>
+    <style>
+        /* Style for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        /* Style for the overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+        
     </style>
     <title>DFW Christmas Lights Installation</title>
 </head>
@@ -294,24 +337,74 @@
     <section id="schedule">
 
         <h2>Schedule Your Installation</h2>
-
-        <label for="Example Field"><color: ECEDE8;>Example Field:</label>
-        <input type="text" id="address" placeholder="Your Address">
-
-<div
+        
+        <div
     class="calendly-inline-widget"
     data-url=https://calendly.com/dfwchristmaslights
-    style="min-width:50px;height:400px;"
+    style="min-width:150px;height:600px;"
 ></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+        
+         </section>
 
+  <section id="Support">
+
+        <h2>Support</h2>
+        <h3 style="color: #ECEDE8; text-align: left;
+            margin-top: .5em; ">If you have any questions, concerns, or need to reschedule your appointment, please fill out the form below or contact us directly by phone or email.</h3><p></p>
+             <h3 style="color: #ECEDE8; text-align: left;
+            margin-top: .5em; ">If you have any questions, concerns, or need to reschedule your appointment, please call or email us.</h3>
+            
+            <button onclick="openModal()">Open Contact Us Form</button>
+
+        
+        <color:#ECEDE8;>
+        <label for="Example Field">Example Field:</label>
+        <input type="text" id="address" placeholder="ff Address">
         <label for="phone">Phone Number:</label>
         <input type="tel" id="phaone" placeholder="Your Phone Number">
         <label for="email"></label>
+        
+        <div id="contactModal" class="modal">
+    <span onclick="closeModal()" style="cursor: pointer; float: right;">&times;</span>
+    <form action="mailto:your@email.com" method="post" enctype="text/plain">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
 
- <input type="text" id="selectDay" placeholder="Select Day">
-    </section>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
 
+        <label for="phone">Your Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="questions">Your Questions:</label>
+        <textarea id="questions" name="questions" rows="4" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<!-- Overlay to darken the background when the modal is open -->
+<div id="overlay" class="overlay"></div>
+
+<script>
+    // Function to open the modal
+    function openModal() {
+        document.getElementById('contactModal').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById('contactModal').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+</script>
+
+        
+        
+        </section>
+ 
     <script>
         function calculatePrice() {
             var squareFootageInput = document.getElementById("squareFootage");
@@ -340,7 +433,7 @@
     </script>
 
     <footer>
-        <p>&copy; 2023 DFW Christmas Lights Installation</p>
+        <p>&copy; 2023 DFW Christmas Lighting Installation</p>
     </footer>
 </body>
 </html>
