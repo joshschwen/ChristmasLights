@@ -130,6 +130,7 @@
             cursor: pointer;
             border: 2px solid #E3001E; /* Bright Christmas Red */
             margin-right: 10px;
+            margin-left: 15px;
 
         }
 
@@ -144,7 +145,8 @@
             padding: 20px; /* Adjusted padding */
             height: 200px;
             border-radius: 50px;
-            margin:  10px;
+            margin:  15px;
+            margin-left:  15px;
             margin-top: -7px;
         }
 
@@ -225,7 +227,7 @@
             <div class="card">
 
                 <h3 style="color: #E3001E; text-align: center;
-            margin-top: 1em;">Professional Installation</h3>
+            margin-top: .5em; ">Professional Installation</h3>
 
                 <ul>
                     <li>Commercial grade wiring</li>
@@ -237,7 +239,7 @@
 
             <div class="card">
                 <h3 style="color: #E3001E; text-align: center;
-            margin-top: 1.5em;">Timely Removal</h3>
+            margin-top: 1em;">Timely Removal</h3>
                 <ul>
                      <br>
                     <li>Guaranteed installation and removal within 7 days of your request</li>
@@ -248,7 +250,7 @@
 
             <div class="card">
                 <h3 style="color: #E3001E; text-align: center;
-            margin-top: 1em;">Energy-Efficient Solutions</h3>
+            margin-top: .5em;">Energy-Efficient Solutions</h3>
                 <ul>
                     <li>Environmentally friendly LED lights</li>
                     <li>Smart lighting control options</li>
@@ -261,9 +263,14 @@
 
     <section id="calculator">
         <h2 style="color: #E3001E;">Get An Instant Estimate Below</h2>
-        <label for="squareFootage">What is Your Home's Total Square Footage?</label>
+        <label for="squareFootage"><b>Step 1: </b>Enter Your Home's Total Square Footage</label>
         <input type="number" id="squareFootage" placeholder="Square Footage" oninput="calculatePrice()">
+          <label for="squareFootage"><b>Step 2: </b>Include any of the Optional Extras below</label><br>
+          
+           <label for="squareFootage"><b>Step 3: </b>Review your Price Estimate</label><br>
+           <label for="squareFootage"><b>Step 4: </b>Schedule your Installation below *note* price quotes are valid for 7 days</label>
                 <p id="result" style="color: #E10600; display: none;">Your Estimated Cost: $0.00</p>
+                  
 <h2 style="color: #E3001E;">Optional Extras</h2>
 <div class="question-container">
 
