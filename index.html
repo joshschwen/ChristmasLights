@@ -206,10 +206,15 @@
         }
         
         
-            <title>Contact Us Form</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
     <style>
         /* Style for the modal */
-        .modal {
+        #contactModal {
             display: none;
             position: fixed;
             top: 50%;
@@ -222,7 +227,7 @@
         }
 
         /* Style for the overlay */
-        .overlay {
+        #overlay {
             display: none;
             position: fixed;
             top: 0;
@@ -234,6 +239,7 @@
         }
     </style>
 </head>
+<body>
 <body>
 
         
@@ -355,17 +361,11 @@
              <h3 style="color: #ECEDE8; text-align: left;
             margin-top: .5em; ">If you have any questions, concerns, or need to reschedule your appointment, please call or email us.</h3>
             
-            <button onclick="openModal()">Open Contact Us Form</button>
+<!-- Button to open the modal -->
+<button onclick="openModal()">Open Contact Us Form</button>
 
-        
-        <color:#ECEDE8;>
-        <label for="Example Field">Example Field:</label>
-        <input type="text" id="address" placeholder="ff Address">
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phaone" placeholder="Your Phone Number">
-        <label for="email"></label>
-        
-        <div id="contactModal" class="modal">
+<!-- Modal for the Contact Us form -->
+<div id="contactModal">
     <span onclick="closeModal()" style="cursor: pointer; float: right;">&times;</span>
     <form action="mailto:your@email.com" method="post" enctype="text/plain">
         <label for="name">Your Name:</label>
@@ -385,7 +385,7 @@
 </div>
 
 <!-- Overlay to darken the background when the modal is open -->
-<div id="overlay" class="overlay"></div>
+<div id="overlay" onclick="closeModal()"></div>
 
 <script>
     // Function to open the modal
@@ -399,8 +399,12 @@
         document.getElementById('contactModal').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
     }
+
 </script>
 
+</body>
+</html>
+        
         
         
         </section>
